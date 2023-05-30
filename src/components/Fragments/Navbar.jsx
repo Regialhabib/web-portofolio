@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link , useLocation} from "react-router-dom";
 import List from "../Elements/List";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,6 +29,17 @@ const Navbar = () => {
     }
   }, [theme, setTheme]);
 
+  
+
+  const location = useLocation();
+  const [activeLink, setActiveLink] = useState('');
+
+  useEffect(() => {
+    setActiveLink(location.pathname);
+  }, [location]);
+
+ 
+
 
   return (
     <>
@@ -49,22 +60,22 @@ const Navbar = () => {
             id="nav"
             className={`bg-white flex-col pt-5 md:pt-0 fixed dark:bg-zinc-900 dark:text-gray-50 w-full max-w-5xl left-0 px-8 bottom-0 top-14 gap-6 ${
               isOpen ? "flex" : "hidden"
-            } font-semibold text-base md:static md:flex-row md:flex md:px-0 md:gap-8  `}
+            } font-semibold text-base md:static md:flex-row md:flex md:px-0 md:gap-4    `}
           >
             <List>
-              <Link to="/">Home</Link>
+              <Link className={`${activeLink === "/" ? "dark:text-purple-500 text-purple-700" : "" }`} to="/">Home</Link>
             </List>
             <List className="border-gray-500 border-b py-2  md:py-0 md:border-none">
-              <Link to="/about">About</Link>
+              <Link className={`${activeLink === "/about" ? "dark:text-purple-500 text-purple-700" : "" }`} to="/about">About</Link>
             </List>
             <List className="border-gray-500 border-b py-2 md:py-0 md:border-none">
-              <Link to="/skills">Skils</Link>
+              <Link className={`${activeLink === "/skills" ? "dark:text-purple-500 text-purple-700" : "" }`} to="/skills">Skils</Link>
             </List>
             <List className="border-gray-500 border-b py-2 md:py-0 md:border-none">
-              <Link to="/contact">Contact</Link>
+              <Link className={`${activeLink === "/contact" ? "dark:text-purple-500 text-purple-700" : "" }`} to="/contact">Contact</Link>
             </List>
             <List className="border-gray-500 border-b py-2 md:py-0 md:border-none">
-              <Link to="/projects">Projects</Link>
+              <Link className={`${activeLink === "/projects" ? "dark:text-purple-500 text-purple-700" : "" }`} to="/projects">Projects</Link>
             </List>
           </ul>
           <div>
