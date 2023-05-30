@@ -35,7 +35,7 @@ const HomeLayout = () => {
   return (
     <>
       <Navbar />
-      <main className="justify-center h-screen flex flex-col-reverse  items-center   md:flex-row md:px-9 md:justify-between w-full  max-w-5xl lg:mx-auto lg:px-0 md:py-10 ">
+      <main className="justify-center bg-cyan-800 h-screen flex flex-col-reverse  items-center   md:flex-row md:px-9 md:justify-between w-full  max-w-5xl lg:mx-auto lg:px-0 md:py-10 ">
         <div className="flex-col flex gap-1 text-center " data-aos="fade-right">
           <h1 className=" text-3xl font-semibold font-mono dark:text-gray-50 tracking-tighter md:mt-0 ">
             Regi Al Habib
