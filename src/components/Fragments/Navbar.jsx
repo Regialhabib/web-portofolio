@@ -58,7 +58,7 @@ const Navbar = () => {
           </div>
           <ul
             id="nav"
-            className={`bg-white flex-col pt-5 md:pt-0  dark:bg-zinc-900 dark:text-gray-50 w-full max-w-5xl left-0 px-8 bottom-0 top-0 gap-6 ${
+            className={`bg-white flex-col pt-5 md:pt-0 fixed  dark:bg-zinc-900 dark:text-gray-50 w-full max-w-5xl left-0 px-8 bottom-0 top-14 gap-6 ${
               isOpen ? "flex" : "hidden"
             } font-semibold text-base md:static md:flex-row md:flex md:px-0 md:gap-4    `}
           >
