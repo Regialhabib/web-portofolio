@@ -48,7 +48,7 @@ const HomeLayout = () => {
           </p>
         </div>
         <div className="" data-aos="fade-left">
-          <img src="./img/ww.png" className="ml-3 md:ml-0"></img>
+          <img src="./img/ww.png" className="ml-3 scale-90 md:scale-100 md:ml-0"></img>
         </div>
       </main>
       <Footer />
